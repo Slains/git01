@@ -53,7 +53,6 @@ public class RoleService extends BaseService<Role, Integer> {
                 permission.setAclValue(moduleMapper.selectByPrimaryKey(mid).getOptValue());
                 permissions.add(permission);
             }
-            // TODO 注意这个地方要添加xml方法实现
             permissionMapper.insertBatch(permissions);
         }
     }
